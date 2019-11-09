@@ -1,0 +1,18 @@
+<view class="card-product" >
+  <view class="card-product-infos">
+    <view class="h2" >{{story.name}}</view>
+    <view class="p">{{story.content}}</view>
+  </view>
+</view>
+
+
+<view class="card-product" wx:for="{{comments}}" wx:for-item="item">
+  <view class="card-product-infos" data-id="{{item.id}}" bindtap="deleteComment">
+    <view class="h2" >{{item.name}}</view>
+    <view class="p">{{item.content}}</view>
+  </view>
+</view>
+
+<!-- <view> {{comment.content}}
+  <view data-id="{{comment.id}}"  > x </view>
+</view> -->
